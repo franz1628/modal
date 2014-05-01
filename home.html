@@ -1,0 +1,36 @@
+<script>
+    function funcion_aparecer(){
+        //Con esto hacemos referencia al modal y lo guardamos
+        var miModal = document.getElementById('miModal');
+        //Acá hacemos aparecer al modal
+        miModal.style.display = 'block';
+    }
+
+    function funcion_cerrar(){
+        //Con esto hacemos referencia al modal y lo guardamos
+        var miModal = document.getElementById('miModal');
+        //Acá hacemos invisible al modal
+        miModal.style.display = 'none';
+    }
+</script>
+
+<style>
+    #miModal{
+        background  : #B3E6F0;
+        border      : 1px solid black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        left        : -210px;   /*Con estas 2 propiedades */
+        margin-left : 50%;      /*hacemos que el modal se centre*/
+        padding     : 10px;
+        position    : fixed;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 50px;
+        width       : 400px;     
+    }
+</style>
+
+<input type="button" value="!Aparece!" onclick="funcion_aparecer()">
+<div id="miModal">
+    <p>Hola esto es un modal personalizado, acá podrás 
+    todo el contenido que quieras</p>
+    <input type="button" value="¡Cerrar bóton!" onclick="funcion_cerrar()">
+</div>
